@@ -1,0 +1,200 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.dashboard-header {
+  background: #0077b6;
+  color: white;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+.dashboard-footer {
+  background: #023047;
+  color: white;
+  text-align: center;
+  padding: 0.5rem 0;
+}
+
+/* Grid Layout */
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  flex: 1;
+} /* Style for the header */
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background: #3a86ff;
+  color: white;
+  position: relative;
+}
+
+/* Profile circle */
+.profile-circle {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+  /* overflow: hidden; */
+}
+
+#user-dp {
+  height: 100%;
+  width: 100%;
+  border-radius: 100%;
+}
+
+#username {
+  font-size: 9px;
+  font-weight: light;
+}
+
+#user-name {
+  font-size: 11px;
+  font-weight: bold;
+}
+
+/* Profile dropdown */
+.profile-dropdown {
+  position: absolute;
+  top: 60px;
+  right: 0;
+  background: white;
+  color: #333;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  padding: 10px;
+  width: 200px;
+  display: none;
+}
+
+.profile-dropdown.visible {
+  display: block;
+}
+
+.profile-dropdown p {
+  margin: 5px 0;
+}
+
+/* Optional: Circle hover effect */
+.profile-circle:hover {
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+}
+
+/* Card Styles */
+.card {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+}
+
+.card h2 {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  color: #0077b6;
+}
+
+.card p,
+.card li {
+  margin: 0.5rem 0;
+  font-size: 1rem;
+}
+
+.card ul {
+  list-style: none;
+  padding: 0;
+}
+
+/* Chart Canvas */
+#progressChart {
+  width: 100%;
+  height: 200px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .card h2 {
+    font-size: 1.2rem;
+  }
+
+  .card p {
+    font-size: 0.9rem;
+  }
+}
+
+#stepsChart,
+#heartRateChart {
+  width: 100%;
+  height: 200px;
+}
+
+.toast {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: #ff4d4d;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  font-size: 14px;
+  z-index: 1000;
+  animation: fadeInOut 3s;
+}
+
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  10%,
+  90% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+}
+
+.activity-data {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 100%;
+  margin-bottom: 5vmin;
+}
+
+.activity-data div {
+  flex: 1;
+}
+
+.activity-data p {
+  font-size: 10px;
+}
+
+.name {
+  margin-bottom: 0;
+}

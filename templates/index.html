@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fitness Dashboard</title>
+    <link rel="stylesheet" href="/static/style.css" />
+  </head>
+  <body>
+    <div class="dashboard">
+      <!-- Header -->
+      <header class="dashboard-header">
+        <h1>Fitness Dashboard</h1>
+        <div class="profile-circle" id="profile-circle">
+          <img id="user-dp" src="/static/user.png" alt="profile image" />
+          <div class="profile-dropdown" id="profile-dropdown">
+            <p id="user-name">John Doe</p>
+            <p id="username">@John Doe</p>
+          </div>
+        </div>
+      </header>
+
+      <!-- Main Grid -->
+      <div class="dashboard-grid">
+        <!-- Activity Summary -->
+        <div class="card activity-summary">
+          <h2>Recent Activities</h2>
+          <div id="activities"></div>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="/static/script.js"></script>
+  </body>
+</html>
