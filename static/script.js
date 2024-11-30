@@ -31,6 +31,11 @@ async function fetchData() {
 
         const data = await response.json();
 
+        if (data.length === 0) {
+            document.getElementById('activities').innerHTML = '<h3>No activities found</h3>';
+            return;
+        }
+
         // Display activities
         for (const activity of data) {
             const activityEl = document.createElement('div');
